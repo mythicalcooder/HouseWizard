@@ -385,7 +385,7 @@ sns.scatterplot(x=df[<span class="code-string">'Gr Liv Area'</span>], y=df[<span
                 <div class="glass-card">
                     <h3><i class="fas fa-hashtag" style="color:var(--primary); margin-right:10px;"></i>Numerical Features</h3>
                     <p style="margin-top: 10px;">Quantitative data requiring scaling.</p>
-                    <div class="code-box">dfn = df.select_dtypes(exclude=<span class="code-string">'object'</span>)</div>
+                    <div class="code-box">dfn = df.select_dtypes(exclude=<span class="code-string">'number'</span>)</div>
                     <ul class="feature-list">
                         <li><i class="fas fa-check"></i> Garage Area</li>
                         <li><i class="fas fa-check"></i> Total Basement SF</li>
@@ -417,7 +417,7 @@ map_dict = {<span class="code-string">'Ex'</span>: <span class="code-keyword">5<
                     </div>
                 </div>
                 <div class="glass-card">
-                    <h3 style="margin-bottom: 15px; color: var(--text-main);">Why not LabelEncoder?</h3>
+                    <h3 style="margin-bottom: 15px; color: var(--text-main);">Why LabelEncoder?</h3>
                     <ul class="feature-list">
                         <li><i class="fas fa-times" style="color:var(--accent);"></i> Default encoders sort alphabetically.</li>
                         <li><i class="fas fa-check"></i> Custom mapping maintains the logical progression (Excellent > Good > Average).</li>
@@ -453,7 +453,7 @@ dfs = pd.get_dummies(dfs, drop_first=<span class="code-keyword">True</span>)
                     <div class="code-box">
 <span class="code-keyword">from</span> sklearn.impute <span class="code-keyword">import</span> KNNImputer
 
-imputer = KNNImputer(n_neighbors=<span class="code-keyword">5</span>)
+imputer = KNNImputer(n_neighbors=<span class="code-keyword">2</span>)
 df_final = imputer.fit_transform(df_merged)
                     </div>
                 </div>
