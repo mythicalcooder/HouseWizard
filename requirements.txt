@@ -1,0 +1,10 @@
+customtkinter
+joblib
+numpy
+matplotlib
+reportlab
+arabic-reshaper
+python-bidi
+pandas
+scikit-learn
+Pillow
